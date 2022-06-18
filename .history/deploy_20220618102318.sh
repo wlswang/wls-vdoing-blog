@@ -1,4 +1,11 @@
 #!/usr/bin/env sh
+###
+ # @Author: WangLiShuai
+ # @Date: 2022-06-17 16:43:19
+ # @LastEditTime: 2022-06-18 10:23:19
+ # @FilePath: \wls-vdoing-blog\deploy.sh
+ # @Description: 
+### 
 
 # 确保脚本抛出遇到的错误
 set -e
@@ -13,12 +20,12 @@ cd docs/.vuepress/dist
 # 如果是发布到自定义域名
 # echo 'lishuai.wang' > CNAME
 
-if [ -z "$GITHUB_TOKEN" ]; then
+if [ -z "$GITHUB_TOKEN_VDOING" ]; then
   msg='deploy'
   githubUrl=git@github.com:wlswang/wls-vdoing-blog.git
 else
   msg='来自github actions的自动部署'
-  githubUrl=https://wlswang:${GITHUB_TOKEN}@github.com/wlswang/wls-vdoing-blog.git
+  githubUrl=https://wlswang:${GITHUB_TOKEN_VDOING}@github.com/wlswang/wls-vdoing-blog.git
   git config --global user.name "wlswang"
   git config --global user.email "121840415@qq.com"
 fi
@@ -26,6 +33,13 @@ git init
 git add -A
 git commit -m "${msg}"
 git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
+
+
+# 如果发布到 https://<USERNAME>.github.io
+# git push -f git@github.com:<wlswang>/<USERNAME>.github.io.git master
+
+# 如果发布到 https://<USERNAME>.github.io/<REPO>
+# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-page
 
 # deploy to coding pages
 # echo 'www.xugaoyi.com\nxugaoyi.com' > CNAME  # 自定义域名
