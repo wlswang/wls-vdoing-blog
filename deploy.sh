@@ -2,7 +2,7 @@
 ###
  # @Author: WangLiShuai
  # @Date: 2022-06-17 16:43:19
- # @LastEditTime: 2022-06-18 11:06:06
+ # @LastEditTime: 2022-06-18 16:45:03
  # @FilePath: \wls-vdoing-blog\deploy.sh
  # @Description: 
 ### 
@@ -18,7 +18,7 @@ cd docs/.vuepress/dist
 
 # deploy to github pages
 # 如果是发布到自定义域名
-# echo 'lishuai.wang' > CNAME
+echo 'wls.ink' > CNAME
 
 if [ -z "$VDOING_TOKEN" ]; then
   msg='deploy'
@@ -46,9 +46,11 @@ git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
 # echo 'google.com, pub-7828333725993554, DIRECT, f08c47fec0942fa0' > ads.txt # 谷歌广告相关文件
 
 # if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_TOKEN来自于github仓库`Settings/Secrets`设置的私密环境变量
-#   codingUrl=git@e.coding.net:xgy/xgy.git
+#   # codingUrl=git@e.coding.net:xgy/xgy.git
+#   codingUrl=git@e.coding.net:iit666/github/wls-vdoing-blog.git
+
 # else
-#   codingUrl=https://HmuzsGrGQX:${CODING_TOKEN}@e.coding.net/xgy/xgy.git
+#   codingUrl=https://iit666:${CODING_TOKEN}@e.coding.net/iit666/github/wls-vdoing-blog.git
 # fi
 # git add -A
 # git commit -m "${msg}"

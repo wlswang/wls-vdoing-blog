@@ -129,7 +129,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
-    logo: '/img/logo.png', // 导航栏logo
+    logo: 'https://cdn.jsdelivr.net/gh/wlswang/wls-image-hosting@master/wls-vdoing-blog-image/logo.533scmtol1s0.webp', // 导航栏logo
     repo: 'wlswang/wls-vdoing-blog', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
@@ -183,8 +183,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 博主信息 (显示在首页侧边栏)
     blogger: {
-      // avatar: 'https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200103123203.jpg',
-      avatar: 'wls-voding-blog/img/logo.png',
+      avatar: 'https://cdn.jsdelivr.net/gh/wlswang/wls-image-hosting@master/wls-vdoing-blog-image/logo.533scmtol1s0.webp',
       name: 'wlswang',
       slogan: '前端界的小学生',
     },
@@ -233,7 +232,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
   // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
   head: [
-    ['link', { rel: 'icon', href: '/img/logo.png' }], //favicons，资源放在public文件夹
+    ['link', { rel: 'icon', href: 'https://cdn.jsdelivr.net/gh/wlswang/wls-image-hosting@master/wls-vdoing-blog-image/logo.533scmtol1s0.webp' }], //favicons，资源放在public文件夹
     [
       'meta',
       {
@@ -241,7 +240,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         content: '前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown',
       },
     ],
-    ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
+    ['meta', { name: 'baidu-site-verification', content: 'code-xqZzyhrLeo' }], // 百度统计的站长验证（你可以去掉）
     ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
     // [
     //   'script',
@@ -336,9 +335,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       {
         choosen: 'gitalk',
         options: {
-          clientID: 'a6e1355287947096b88b',
-          clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-          repo: 'blog-gitalk-comment', // GitHub 仓库
+          clientID: 'c9f26b94b95cd274bb62',
+          clientSecret: '0fcc87a13314f226701a179ed12706b669ba7f85',
+          repo: 'wls-vdoing-blog', // GitHub 仓库
           owner: 'wlswang', // GitHub仓库所有者
           admin: ['wlswang'], // 对仓库有写权限的人
           // distractionFreeMode: true,
