@@ -2,7 +2,7 @@
 ###
  # @Author: WangLiShuai
  # @Date: 2022-06-17 16:43:19
- # @LastEditTime: 2022-06-20 11:14:33
+ # @LastEditTime: 2022-06-18 16:45:03
  # @FilePath: \wls-vdoing-blog\deploy.sh
  # @Description: 
 ### 
@@ -15,7 +15,7 @@ npm run build
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
-    
+
 # deploy to github pages
 # 如果是发布到自定义域名
 echo 'wls.ink' > CNAME
