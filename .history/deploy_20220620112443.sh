@@ -1,4 +1,11 @@
 #!/usr/bin/env sh
+###
+ # @Author: WangLiShuai
+ # @Date: 2022-06-17 16:43:19
+ # @LastEditTime: 2022-06-20 11:24:42
+ # @FilePath: \wls-vdoing-blog\deploy.sh
+ # @Description: 
+### 
 
 # 确保脚本抛出遇到的错误
 set -e
