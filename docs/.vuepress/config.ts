@@ -335,8 +335,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       {
         choosen: 'gitalk',
         options: {
-          clientID: 'c9f26b94b95cd274bb62',
-          clientSecret: '0fcc87a13314f226701a179ed12706b669ba7f85',
+          clientID: 'ca4e8026a16bb3d7c80f',
+          clientSecret: '489db9cb3583dac46a8598f34b488af68d60ab32',
           repo: 'wls-vdoing-blog', // GitHub 仓库
           owner: 'wlswang', // GitHub仓库所有者
           admin: ['wlswang'], // 对仓库有写权限的人
