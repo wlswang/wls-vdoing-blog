@@ -69,7 +69,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       {
         text: '后端开发', link: '/rd/',
         items: [
-          { text: '后端', link: '/pages/93a517/'}
+          { text: '后端开发', link: '/pages/93a517/'}
         ]
       },
       {
@@ -85,7 +85,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       { text: '测试运维', link: '/linux/'},
       { text: '计算机基础', link: '/base/'},
       {
-        text: '更多',
+        text: '杂项',
         link: '/more/',
         items: [
           { text: '学习', link: '/pages/f2a556/' },
@@ -95,7 +95,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '友情链接', link: '/friends/' },
         ],
       },
-      { text: '杂项', link: '/pages/3bd437/'},
       { text: '关于', link: '/about/' },
       {
         text: '收藏',
@@ -147,7 +146,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     //   '图标地址1',
     //   '图标地址2'
     // ],
-    contentBgStyle: 6, // 文章内容块的背景风格，默认无. 1 方格 | 2 横线 | 3 竖线 | 4 左斜线 | 5 右斜线 | 6 点状
+    contentBgStyle: 5, // 文章内容块的背景风格，默认无. 1 方格 | 2 横线 | 3 竖线 | 4 左斜线 | 5 右斜线 | 6 点状
 
     // updateBar: { // 最近更新栏
     //   showToArticle: false, // 显示到文章页底部，默认true
