@@ -202,7 +202,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     footer: {
       createYear: 2021, // 博客创建年份
       copyrightInfo:
-        'wlswang | <a href="https://github.com/wlswang/wls-vdoing-blog/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签或换行标签</br>
+        '<br><a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2022063197号</a><br>wlswang | <a href="https://github.com/wlswang/wls-vdoing-blog/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签或换行标签</br>
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
@@ -329,11 +329,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           admin: ['wlswang'], // 对仓库有写权限的人
           distractionFreeMode: false,
           pagerDirection: 'last', // 'first'正序 | 'last'倒序
-          id: '<%- frontmatter.permalink || frontmatter.to.path %>', //  页面的唯一标识,长度不能超过50
-          title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
-          labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
-          body:
-            '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+          id: "<%- (window.location.origin + (frontmatter.to.path || window.location.pathname)).slice(-50) %>", //  页面的唯一标识,长度不能超过50
+          title: "「评论」<%- document.title %>", // GitHub issue 的标题
+          labels: ["Gitalk", "Comment"], // GitHub issue 的标签
+          body:"<%- document.title %>：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>" // GitHub issue 的内容
         },
       },
     ],
