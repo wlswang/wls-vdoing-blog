@@ -83,7 +83,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         ],
       },
       { text: '测试运维', link: '/linux/'},
-      { text: '计算机基础', link: '/jsj/'},
+      { text: '计算机基础', link: '/base/'},
       {
         text: '更多',
         link: '/more/',
@@ -95,7 +95,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '友情链接', link: '/friends/' },
         ],
       },
-     
+      { text: '杂项', link: '/pages/3bd437/'},
       { text: '关于', link: '/about/' },
       {
         text: '收藏',
