@@ -358,6 +358,17 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
+    [
+      'dynamic-title', // 
+      {
+        //  showIcon: '/favicon.ico',
+         showText: '(/≧▽≦/)咦！欢迎回来！',
+        //  hideIcon: '/favicon.ico',
+         hideText: '(●—●)喔哟，别走啊！',
+         recoverTime: 1000,
+      },
+    ],
+    ['go-top'] // 去顶部
   ],
 
   markdown: {
