@@ -32,12 +32,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         items: [
           // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
           {
-            text: '前端文章',
-            items: [
-              { text: 'JavaScript', link: '/pages/8143cc480faf9a11/' },
-            ],
-          },
-          {
             text: '学习笔记',
             items: [
               { text: '《JavaScript教程》', link: '/note/javascript/' },
@@ -66,20 +60,17 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
            {
             text: '打怪指南-前端',
             items: [
-              { text: '《JavaScript教程》', link: '/note/javascript/' },
-              { text: '《JavaScript高级程序设计》', link: '/note/js/' },
-             
+              { text: 'HTML', link: '/pages/8309a5b876fc95e3/' },
+              { text: 'CSS', link: '/pages/0a83b083bdf257cb/' },
             ],
           },
         ],
       },
       {
-        text: '页面',
-        link: '/ui/',
+        text: '后端开发', link: '/rd/',
         items: [
-          { text: 'HTML', link: '/pages/8309a5b876fc95e3/' },
-          { text: 'CSS', link: '/pages/0a83b083bdf257cb/' },
-        ],
+          { text: '后端', link: '/pages/93a517/'}
+        ]
       },
       {
         text: '技术',
@@ -90,9 +81,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: 'Nodejs', link: '/pages/117708e0af7f0bd9/' },
           { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
         ],
-      },
-       {
-        text: '后端开发', link: '/houduan/'
       },
       { text: '测试运维', link: '/linux/'},
       { text: '计算机基础', link: '/jsj/'},
@@ -185,7 +173,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     blogger: {
       avatar: 'https://cdn.jsdelivr.net/gh/wlswang/wls-image-hosting@master/wls-vdoing-blog-image/logo.533scmtol1s0.webp',
       name: 'wlswang',
-      slogan: '前端界的小学生',
+      slogan: '编程界的小学生',
     },
 
     // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social)
@@ -342,7 +330,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           admin: ['wlswang'], // 对仓库有写权限的人
           distractionFreeMode: false,
           pagerDirection: 'last', // 'first'正序 | 'last'倒序
-          id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
+          id: '<%- frontmatter.permalink || frontmatter.to.path %>', //  页面的唯一标识,长度不能超过50
           title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
           labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
           body:

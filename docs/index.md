@@ -13,10 +13,10 @@ features: # 可选的
     link: /web/ # 可选
     imgUrl: 'https://cdn.jsdelivr.net/gh/wlswang/wls-image-hosting@master/wls-vdoing-blog-image/ui.fc3qqy7s7ww.webp' # 可选
   - title: 后端开发
-    details: html(5)/css(3)，前端页面相关技术
-    link: /ui/
+    details: java/python/php，后端相关技术
+    link: /rd/
     imgUrl: 'https://cdn.jsdelivr.net/gh/wlswang/wls-image-hosting@master/wls-vdoing-blog-image/web.7ixuza5q7zw0.webp'
-  - title: 测试运维
+  - title: 技术
     details: 技术文档、教程、技巧、总结等文章
     link: /technology/
     imgUrl: 'https://cdn.jsdelivr.net/gh/wlswang/wls-image-hosting@master/wls-vdoing-blog-image/other.w45rvdkaxa.webp'
