@@ -161,9 +161,9 @@
 </template>
 
 <script>
-import NavLink from "@theme/components/NavLink";
-import BScroll from "@better-scroll/core"
-import Slide from "@better-scroll/slide"
+import NavLink from '@theme/components/NavLink'
+import BScroll from '@better-scroll/core'
+import Slide from '@better-scroll/slide'
 import MainLayout from '@theme/components/MainLayout'
 import PostList from '@theme/components/PostList'
 import UpdateArticle from '@theme/components/UpdateArticle'
@@ -188,13 +188,13 @@ export default {
 
       total: 0, // 总长
       perPage: 10, // 每页长
-      currentPage: 1// 当前页
+      currentPage: 1, // 当前页
     }
   },
   computed: {
     homeData() {
       return {
-        ...this.$page.frontmatter
+        ...this.$page.frontmatter,
       }
     },
     hasFeatures() {
@@ -204,62 +204,85 @@ export default {
       const { htmlModules } = this.$themeConfig
       return htmlModules ? htmlModules.homeSidebarB : ''
     },
-    showBanner() { // 当分页不在第一页时隐藏banner栏
-      return this.$route.query.p
-        && this.$route.query.p != 1
-        && (!this.homeData.postList || this.homeData.postList === 'detailed')
-        ? false : true
+    showBanner() {
+      // 当分页不在第一页时隐藏banner栏
+      return this.$route.query.p &&
+        this.$route.query.p != 1 &&
+        (!this.homeData.postList || this.homeData.postList === 'detailed')
+        ? false
+        : true
     },
     bannerBgStyle() {
       let bannerBg = this.homeData.bannerBg
-      if (!bannerBg || bannerBg === 'auto') { // 默认
-        if (this.$themeConfig.bodyBgImg) { // 当有bodyBgImg时，不显示背景
+      if (!bannerBg || bannerBg === 'auto') {
+        // 默认
+        if (this.$themeConfig.bodyBgImg) {
+          // 当有bodyBgImg时，不显示背景
           return ''
-        } else { // 网格纹背景
+        } else {
+          // 网格纹背景
           return 'background: rgb(40,40,45) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABOSURBVFhH7c6xCQAgDAVRR9A6E4hLu4uLiWJ7tSnuQcIvr2TRYsw3/zOGGEOMIcYQY4gxxBhiDDGGGEOMIcYQY4gxxBhiDLkx52W4Gn1tuslCtHJvL54AAAAASUVORK5CYII=)'
         }
-      } else if (bannerBg === 'custom') { // 自定义背景
-          return 'letter-spacing: 2px;background-image: linear-gradient(90deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%), linear-gradient(360deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%);background-size: 20px 20px;background-position: center center;'
-      } else if (bannerBg === 'none') { // 无背景
+      } else if (bannerBg === 'custom') {
+        return 'letter-spacing: 2px;background-image: linear-gradient(90deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%), linear-gradient(360deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%);background-size: 20px 20px;background-position: center center;'
+      } else if (bannerBg === 'none') {
+        // 无背景
         if (this.$themeConfig.bodyBgImg) {
-          return: ''
+          return ''
         } else {
           return 'background: var(--mainBg);color: var(--textColor)'
         }
-      }
-       else if (bannerBg.indexOf('background') > -1) { // 自定义背景样式
+      } else if (bannerBg.indexOf('background') > -1) {
+        // 自定义背景样式
         return bannerBg
-      } else if (bannerBg.indexOf('.') > -1) { // 大图
-        return `background: url(${this.$withBase(bannerBg)}) center center / cover no-repeat`
+      } else if (bannerBg.indexOf('.') > -1) {
+        // 大图
+        return `background: url(${this.$withBase(
+          bannerBg
+        )}) center center / cover no-repeat`
       }
-
     },
     actionLink() {
       return {
         link: this.homeData.actionLink,
-        text: this.homeData.actionText
-      };
-    }
+        text: this.homeData.actionText,
+      }
+    },
   },
-  components: { NavLink, MainLayout, PostList, UpdateArticle, BloggerBar, CategoriesBar, TagsBar, Pagination },
+  components: {
+    NavLink,
+    MainLayout,
+    PostList,
+    UpdateArticle,
+    BloggerBar,
+    CategoriesBar,
+    TagsBar,
+    Pagination,
+  },
   created() {
     this.total = this.$sortPosts.length
   },
   beforeMount() {
-    this.isMQMobile = window.innerWidth < MOBILE_DESKTOP_BREAKPOINT ? true : false; // vupress在打包时不能在beforeCreate(),created()访问浏览器api（如window）
+    this.isMQMobile =
+      window.innerWidth < MOBILE_DESKTOP_BREAKPOINT ? true : false // vupress在打包时不能在beforeCreate(),created()访问浏览器api（如window）
   },
   mounted() {
     if (this.$route.query.p) {
       this.currentPage = Number(this.$route.query.p)
     }
 
-    if (this.hasFeatures && this.isMQMobile && (!this.$route.query.p || this.$route.query.p == 1)) {
+    if (
+      this.hasFeatures &&
+      this.isMQMobile &&
+      (!this.$route.query.p || this.$route.query.p == 1)
+    ) {
       this.init()
     }
 
     if (this.hasFeatures) {
       window.addEventListener('resize', () => {
-        this.isMQMobile = window.innerWidth < MOBILE_DESKTOP_BREAKPOINT ? true : false;
+        this.isMQMobile =
+          window.innerWidth < MOBILE_DESKTOP_BREAKPOINT ? true : false
         if (this.isMQMobile && !this.slide && !this.mark) {
           this.mark++
           setTimeout(() => {
@@ -287,7 +310,7 @@ export default {
           this.init()
         }, 0)
       }
-    }
+    },
   },
   methods: {
     init() {
@@ -297,14 +320,14 @@ export default {
         scrollY: false, // y轴滚动
         slide: {
           loop: true,
-          threshold: 100
+          threshold: 100,
         },
         useTransition: true, // 使用css3 transition动画
         momentum: false,
         bounce: false, // 回弹
         stopPropagation: false, // 是否阻止事件冒泡
         probeType: 2,
-        preventDefault: false
+        preventDefault: false,
       })
 
       // user touches the slide area
@@ -326,17 +349,19 @@ export default {
         this.slide.next()
       }, 4000)
     },
-    handlePagination(i) { // 分页
+    handlePagination(i) {
+      // 分页
       this.currentPage = i
     },
     getScrollTop() {
-      return window.pageYOffset
-        || document.documentElement.scrollTop
-        || document.body.scrollTop
+      return (
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop
+      )
     },
   },
-
-};
+}
 </script>
 
 <style lang="stylus" scoped>
