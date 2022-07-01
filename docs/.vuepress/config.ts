@@ -202,7 +202,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     footer: {
       createYear: 2021, // 博客创建年份
       copyrightInfo:
-        '<br><a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2022063197号</a><br>wlswang | <a href="https://github.com/wlswang/wls-vdoing-blog/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签或换行标签</br>
+        '<br><a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2022016216号</a><br>wlswang | <a href="https://github.com/wlswang/wls-vdoing-blog/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签或换行标签</br>
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
