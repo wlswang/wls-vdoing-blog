@@ -170,7 +170,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 博主信息 (显示在首页侧边栏)
     blogger: {
-      avatar: 'https://cdn.staticaly.net/gh/wlswang/wls-image-hosting@master/wls-vdoing-blog-image/logo.533scmtol1s0.webp',
+      avatar: 'https://cdn.staticaly.com/gh/wlswang/wls-image-hosting@master/wls-vdoing-blog-image/logo.533scmtol1s0.webp',
       name: 'wlswang',
       slogan: '编程界的小学生',
     },

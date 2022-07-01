@@ -11,15 +11,15 @@ features: # 可选的
   - title: 前端开发
     details: JavaScript、ES6、Vue框架等前端技术
     link: /web/ # 可选
-    imgUrl: 'https://cdn.staticaly.net/gh/wlswang/wls-image-hosting@master/wls-vdoing-blog-image/ui.fc3qqy7s7ww.webp' # 可选
+    imgUrl: 'https://cdn.staticaly.com/gh/wlswang/wls-image-hosting@master/wls-vdoing-blog-image/ui.fc3qqy7s7ww.webp' # 可选
   - title: 后端开发
     details: java/python/php，后端相关技术
     link: /rd/
-    imgUrl: 'https://cdn.staticaly.net/gh/wlswang/wls-image-hosting@master/wls-vdoing-blog-image/web.7ixuza5q7zw0.webp'
+    imgUrl: 'https://cdn.staticaly.com/gh/wlswang/wls-image-hosting@master/wls-vdoing-blog-image/web.7ixuza5q7zw0.webp'
   - title: 技术
     details: 技术文档、教程、技巧、总结等文章
     link: /technology/
-    imgUrl: 'https://cdn.staticaly.net/gh/wlswang/wls-image-hosting@master/wls-vdoing-blog-image/other.w45rvdkaxa.webp'
+    imgUrl: 'https://cdn.staticaly.com/gh/wlswang/wls-image-hosting@master/wls-vdoing-blog-image/other.w45rvdkaxa.webp'
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 # postList: detailed
 # simplePostListLength: 10 # 简约版文章列表显示的文章数量，默认10。（仅在postList设置为simple时生效）
